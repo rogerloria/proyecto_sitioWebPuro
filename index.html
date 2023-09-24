@@ -21,5 +21,73 @@
         <li><a>LISTAR COMBOS</a></li>
       </ul>
     </nav>
+    <section>
+      <!-- DIV TABLA SERVICIOS -->
+      <div id="div_tabla_servicio" class="contenedor" style="display: none">
+        <h2 id="titulo">Nuestros Servicios</h2>
+        <table id="servicios" name="servicios">
+          <thead>
+            <tr>
+              <th id="codigo" name="codigo">Codigo</th>
+              <th id="descripcion" name="descripcion">Descripcion</th>
+              <th id="costo" name="costo">Costo</th>
+              <th id="acabado" name="acabado">Acabado</th>
+              <th id="multicolor" name="multicolor">Multicolor</th>
+              <th id="combo" name="combo">Combo</th>
+              <th id="imagen" name="imagen">Imagen</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <!-- FIN DIV -->
+
+      <!-- DIV FORM CREAR SERVICIOS -->
+      <div id="div_form_crear_servicio" class="contenedor">
+        <h2>Crear Servicios</h2>
+        <form id="form_crear_servicio" name="form_crear_servicio">
+          <input
+            type="text"
+            name="inp_codigo"
+            id="inp_codigo"
+            placeholder="Escribe el codigo."
+          />
+          <input
+            type="text"
+            name="inp_descripcion"
+            id="inp_descripcion"
+            placeholder="Escriba la descripcion."
+          />
+          <input
+            type="number"
+            name="inp_costo"
+            id="inp_costo"
+            placeholder="Costo."
+          />
+          <select
+            name="inp_acabado"
+            id="inp_acabado"
+            form="form_crear_servicio"
+          >
+            <option default="Seleccione el acabado">
+              Seleccione el acabado
+            </option>
+            <option value="resina">Resina</option>
+            <option value="natural">Natural</option>
+            <option value="plastico">Plastico</option>
+          </select>
+        </form>
+      </div>
+      <!-- DIV TABLA COMBOS -->
+      <div id="div_tabla_combos" class="contenedor" style="display: none"></div>
+      <!-- DIV FORM CREAR COMBOS -->
+      <div
+        id="div_form_crear_combos"
+        class="contenedor"
+        style="display: none"
+      ></div>
+    </section>
+    <footer>
+      <h4>Mi primer curso en HTML puro.</h4>
+    </footer>
   </body>
 </html>

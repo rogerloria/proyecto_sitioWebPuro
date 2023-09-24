@@ -27,5 +27,20 @@ header {
     text-decoration: none;
     padding: 10px;
     background-color: brown;
-    color: cadetblue
+    color: rgb(12, 194, 200)
+}
+
+.contenedor {
+    height: 450px;
+    overflow: auto
+}
+
+table {
+    width: 50%;
+    padding: 10px;
+    border: 1px;
+    border-collapse: collapse;
+    border-radius: 5px;
+    border-color: brown;
+    margin: auto
 }
