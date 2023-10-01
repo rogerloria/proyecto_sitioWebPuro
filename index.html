@@ -6,7 +6,7 @@
     <meta charset="UTF-8" name="title" content="Uñas Bellas" />
     <meta name="description" content="Uñas, Bellas" />
     <link rel="stylesheet" type="text/css" href="css/estilos.css" />
-    <link src="js/scrips.js" />
+    <script src="js/scrips.js"></script>
   </head>
   <body>
     <header>
@@ -15,15 +15,15 @@
     </header>
     <nav>
       <ul id="button">
-        <li><a>CREAR SERVICIOS</a></li>
-        <li><a>LISTAR SERVICIOS</a></li>
-        <li><a>CREAR COMBOS</a></li>
-        <li><a>LISTAR COMBOS</a></li>
+        <li><a href="javascript:mostrar('div_form_crear_servicio');">CREAR SERVICIOS</a></li>
+        <li><a href="javascript:mostrar('div_tabla_servicios');">LISTAR SERVICIOS</a></li>
+        <li><a href="javascript:mostrar('div_form_crear_combo');">CREAR COMBOS</a></li>
+        <li><a href="javascript:mostrar('div_tabla_combos');">LISTAR COMBOS</a></li>
       </ul>
     </nav>
     <section>
       <!-- DIV TABLA SERVICIOS -->
-      <div id="div_tabla_servicio" class="contenedor" style="display: none">
+      <div id="div_tabla_servicios" class="contenedor">
         <h2 id="titulo">Nuestros Servicios</h2>
         <table id="servicios" name="servicios">
           <thead>
@@ -42,9 +42,13 @@
       <!-- FIN DIV -->
 
       <!-- DIV FORM CREAR SERVICIOS -->
-      <div id="div_form_crear_servicio" class="contenedor">
+      <div
+        id="div_form_crear_servicio"
+        class="contenedor"
+        style="display: none"
+      >
         <h2>Crear Servicios</h2>
-        <form id="form_crear_servicio" name="form_crear_servicio">
+        <form id="div_form_crear_servicio" name="div_form_crear_servicio">
           <input
             type="text"
             name="inp_codigo"
@@ -78,13 +82,33 @@
         </form>
       </div>
       <!-- DIV TABLA COMBOS -->
-      <div id="div_tabla_combos" class="contenedor" style="display: none"></div>
+      <div id="div_tabla_combos" class="contenedor" style="display: none">
+        <h2 id="titulo">COMBOS</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Servicios</th>
+              <th>Costo</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
       <!-- DIV FORM CREAR COMBOS -->
-      <div
-        id="div_form_crear_combos"
-        class="contenedor"
-        style="display: none"
-      ></div>
+      <div id="div_form_crear_combo" class="contenedor" style="display: none">
+        <h2 id="titulo">CREAR COMBOS</h2>
+        <form id="form_crear_combos" name="form_crear_combos">
+          <input type="text" name="combo_codigo" id="combo_codigo" placeholder="Escribe el codigo del combo"/>
+          <input type="text" name="combo_nombre" id="combo_nombre" placeholder="Escriba el nombre del codigo"/>
+          <label for="combo_servicios">Selecciona el servicio</label>
+          <select id="combo_servicios" name="combo_servicios" ></select>
+          <textarea id="combo_servicios_incluidos" name="combo_servicios_incluidos" aria-multiline="true" aria-placeholder="Servicios incluidos"></textarea>
+          <input type="number" id="combo_costo" name="combo_costo" placeholder="Costo actualizado"/>
+          <input type="button" value="Crear Combo"/>
+        </form>
+      </div>
     </section>
     <footer>
       <h4>Mi primer curso en HTML puro.</h4>

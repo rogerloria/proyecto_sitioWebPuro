@@ -13,6 +13,7 @@ header {
     padding: 5px;
     margin: 5px
 }
+
 #button {
     padding: 0
 }
@@ -20,6 +21,7 @@ header {
 #button li {
     display: inline
 }
+
 #button li a {
     font-family: Arial;
     font-size: 11px;
@@ -43,4 +45,59 @@ table {
     border-radius: 5px;
     border-color: brown;
     margin: auto
+}
+
+/*Estilos para los formularios*/
+form {
+    width: 225px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: auto;
+    background-color: brown;
+}
+
+form label {
+    text-align: left;
+    padding: 0px 5px;
+    font-weight: bold;
+    display: inline-block;
+    color: rgb(12, 194, 200)
+}
+
+form input[type="text"],
+form input[type="textarea"],
+form select,
+form input[type="number"],
+form input[type="button"] {
+    width: 180px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    background-color: white;
+    margin: 6px 0;
+    text-decoration: none;
+    color: black
+}
+
+form input[type="button"]:hover {
+    cursor: pointer
+}
+
+form img {
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin: 6px 0
+}
+
+form select {
+    width: 190px;
+    color: rgb(0, 0, 0)
+}
+
+form input[type="file"] {
+    width: 200;
+    color: rgb(0, 0, 0)
+}
+
+form input[type="textaria"] {
+    width: 100%
 }
